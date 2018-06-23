@@ -1,6 +1,8 @@
 module.exports = {
-  // https://stackoverflow.com/questions/42377038/error-document-is-not-defined-eslint-react
-  "browser": true,
+  "env": {
+    // https://stackoverflow.com/questions/42377038/error-document-is-not-defined-eslint-react
+    "browser": true
+  },
 
   "extends": [
     "eslint:recommended",
