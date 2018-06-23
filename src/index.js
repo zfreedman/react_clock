@@ -8,10 +8,22 @@ class App extends React.Component {
     this.state = {
       time: Date.now()
     };
+
+    this.updateTime = this.updateTime.bind(this);
   }
+
+  updateTime() {
+    this.setState({
+      time: Date.now()
+    });
+  }
+
   render() {
     return (
-      <div>{this.state.time}</div>
+      <div>
+        <h1>{this.state.time}</h1>
+        <button onClick={this.updateTime}>Update</button>
+      </div>
     );
   }
 }
