@@ -10,6 +10,8 @@ class App extends React.Component {
     };
 
     this.updateTime = this.updateTime.bind(this);
+
+    setInterval(this.updateTime, 1000);
   }
 
   updateTime() {
@@ -22,7 +24,6 @@ class App extends React.Component {
     return (
       <div>
         <h1>{this.state.time}</h1>
-        <button onClick={this.updateTime}>Update</button>
       </div>
     );
   }
