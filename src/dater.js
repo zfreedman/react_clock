@@ -19,9 +19,15 @@ export default class Dater extends React.Component {
       `July`, `August`, `September`, `October`, `November`, `December`
     ];
     let m = months[this.props.date.getMonth()];
-    let d = this.props.date.getDay();
+
+    let weekdays = [
+      `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`,
+      `Friday`, `Saturday`
+    ];
+    let w = weekdays[this.props.date.getDay()];
+    let d = this.props.date.getDate();
     let y = this.props.date.getFullYear();
-    return `${m} ${d}, ${y}`;
+    return `${w}, ${m} ${d}, ${y}`;
   }
 
   render() {
