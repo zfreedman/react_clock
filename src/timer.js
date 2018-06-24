@@ -17,7 +17,7 @@ export default class Timer extends React.Component {
 
     let halves = [`am`, `pm`];
     let half = hours < 11 ? halves[0] : halves[1];
-    
+
     return `${displayHours}:${minutes}:${seconds}${half}`;
   }
 

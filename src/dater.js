@@ -20,7 +20,7 @@ export default class Dater extends React.Component {
     ];
     let m = months[this.props.date.getMonth()];
     let d = this.props.date.getDay();
-    let y = this.props.date.getYear();
+    let y = this.props.date.getFullYear();
     return `${m} ${d}, ${y}`;
   }
 

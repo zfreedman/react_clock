@@ -11,12 +11,12 @@ class App extends React.Component {
 
     this.state = {
       date: new Date(),
-      tick: .5,
+      tick: 1000,
     };
 
     this.updateDate = this.updateDate.bind(this);
 
-    setInterval(this.updateDate, this.state.tick * 1000);
+    setInterval(this.updateDate, this.state.tick);
   }
 
   updateDate() {
@@ -30,7 +30,9 @@ class App extends React.Component {
       <div>
         <Dater date={this.state.date} />
         <Timer date={this.state.date} />
-        <Ticker time={this.state.date.getTime()} />
+        <Ticker
+          tick={this.state.tick}
+          time={this.state.date.getTime()} />
       </div>
     );
   }
