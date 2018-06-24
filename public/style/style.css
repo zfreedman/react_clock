@@ -9,8 +9,11 @@
 }
 
 body {
-  margin: 0;
+  background-color: black;
+  color: white;
   font-family: leagueGothic;
+  margin: 0;
+  text-shadow: 0 0 25px #0099ff;
 }
 
 #dater {
