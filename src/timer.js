@@ -11,20 +11,19 @@ export default class Timer extends React.Component {
     // format hours
     let hours = this.props.date.getHours();
     let displayHours = (hours + 1) % 13;
-    // format minutes
-    let minutes = this.props.date.getMinutes();
-    minutes = String(minutes).length === 2 ? minutes : `0` + minutes;
 
-    let seconds = this.props.date.getSeconds();
+    let minutes = String(this.props.date.getMinutes()).padStart(2, 0);
+    let seconds = String(this.props.date.getSeconds()).padStart(2, 0);
+
     let halves = [`am`, `pm`];
-
     let half = hours < 11 ? halves[0] : halves[1];
+    
     return `${displayHours}:${minutes}:${seconds}${half}`;
   }
 
   render() {
     return (
-      <div id="ticker" className="appDiv">
+      <div id="timer" className="appDiv">
         {this.timeString()}
       </div>
     );
