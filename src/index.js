@@ -6,12 +6,13 @@ class App extends React.Component {
     super(props);
 
     this.state = {
+      tick: .1,
       time: Date.now()
     };
 
     this.updateTime = this.updateTime.bind(this);
 
-    setInterval(this.updateTime, 1000);
+    setInterval(this.updateTime, this.state.tick * 1000);
   }
 
   updateTime() {
