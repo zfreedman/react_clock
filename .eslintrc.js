@@ -29,6 +29,8 @@ module.exports = {
     "quotes": [2, "backtick"],
     "react/jsx-uses-react": 2,
     "react/jsx-uses-vars": 2,
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
+    "react/prop-types": 0,
     "require-jsdoc": 0
   },
 

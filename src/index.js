@@ -1,30 +1,36 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import Dater from "./dater";
+import Timer from "./timer";
+import Ticker from "./ticker";
+
 class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      tick: .1,
-      time: Date.now()
+      date: new Date(),
+      tick: .5,
     };
 
-    this.updateTime = this.updateTime.bind(this);
+    this.updateDate = this.updateDate.bind(this);
 
-    setInterval(this.updateTime, this.state.tick * 1000);
+    setInterval(this.updateDate, this.state.tick * 1000);
   }
 
-  updateTime() {
+  updateDate() {
     this.setState({
-      time: Date.now()
+      date: new Date()
     });
   }
 
   render() {
     return (
       <div>
-        <h1>{this.state.time}</h1>
+        <Dater date={this.state.date} />
+        <Timer date={this.state.date} />
+        <Ticker time={this.state.date.getTime()} />
       </div>
     );
   }

@@ -2,9 +2,20 @@ body {
   margin: 0;
 }
 
+.appDiv {
+  text-align: center;
+}
+
+#dater {
+  font-size: 48px;
+}
+
 #root {
   align-items: center;
   display: flex;
   height: 100vh;
   justify-content: center;
+}
+
+#ticker {
 }
